@@ -1,0 +1,9 @@
+emotion negative 	$ index $ description
+Colere, Degout   	$	$ New day, new attempt from my boss to try and hit on me, i don't get why he still insists on trying all the time while still paying me like shit, i really hate this
+Tristesse, Colere	$	$ My cat died. She wasnt even that old. That fucking sucks, and the way she just curled up and, stopped moving, she knew she was dying there was nothing i could've done to help her, i'm feeling terrible
+Stress, Peur	 	$	$ Big event coming, some kind of test they told us, i don't fucking know, noone on the block has any idea what it is supposed to be,don't wanna lose my lease, everyone's on edge, including me
+Peur,Tristesse,Honte    $	$ Failed the test I guess, well that's what they told me, I have to pack my stuff and be gone tomorrow, they're moving me to another block i guess, i'm gonna miss everyone, and i'm scared
+Degout, Honte	 	$	$ The first night in was horrible, those big homes are way to cold, and i'm sick already, while waiting for the food I vomited on the roadside and it hit someone, I'm feeling disgusting
+Colere, Degout		$	$ This new job sucks, I'm supposed to be guiding all those people, but i don't have any info on them, and they're really really pretentious, the way that last guy looked at me really angered me
+Stress, Peur, Honte	$	$ I don't get it, I seem to be fucking up all the time, and i don't know why, last night i had to go vomit in between interviews, i'm really lost and i think this new job is tiring me out
+Colere, Tristesse, Peur	$	$ I really don't like those people, i saw one of them beat up a servant, for a stupide reason even, but I couldnt do anything. I don't think i would've, though, i was really scared by his outbursts
