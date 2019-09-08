@@ -195,7 +195,7 @@ public class TextManager : MonoBehaviour
       int index_choice_event = 0;
       int nb_event = event_negatif_list.Count;
       List<int> choice_list = new List<int>();
-      Random.seed = (int)System.DateTime.Now.Ticks;
+      Random.InitState((int)System.DateTime.Now.Ticks );
 
       negatif_event_of_this_run = new Event[nb_event_by_game];
       for (int i = 0; i < nb_event_by_game; i++)
@@ -203,8 +203,7 @@ public class TextManager : MonoBehaviour
         int choice =  Random.Range(0, nb_event);
         while (choice_list.Contains(choice))
         {
-          choice = Random.Range(0, nb_event);
-          print (choice);
+          choice =   Random.Range(0, nb_event);
         }
         negatif_event_of_this_run[index_choice_event] = event_negatif_list[choice];
         index_choice_event += 1;
@@ -240,7 +239,7 @@ public class TextManager : MonoBehaviour
     public class Event
     {
         public string text;
-        public Event[] solution = new Event[3];
+        public Event[] solution;
         public string value;
 
         public Event(string current_text, Event[] current_solution)
