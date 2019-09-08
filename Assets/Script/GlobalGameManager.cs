@@ -31,7 +31,14 @@ public class GlobalGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      if (Input.GetKeyDown("escape"))
+        {
+          #if UNITY_EDITOR
+                  UnityEditor.EditorApplication.isPlaying = false;
+          #else
+                  Application.Quit ();
+          #endif
+        }
     }
 
     void FixChoice()

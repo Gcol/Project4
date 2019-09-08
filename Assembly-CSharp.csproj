@@ -55,11 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Book_collider.cs" />
      <Compile Include="Assets\Script\ButtonManager.cs" />
      <Compile Include="Assets\Script\ChoiceManager.cs" />
      <Compile Include="Assets\Script\Fade.cs" />
      <Compile Include="Assets\Script\GlobalGameManager.cs" />
      <Compile Include="Assets\Script\NextPage.cs" />
+     <Compile Include="Assets\Script\Open_Book.cs" />
      <Compile Include="Assets\Script\TextManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

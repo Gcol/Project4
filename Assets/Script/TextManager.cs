@@ -13,6 +13,10 @@ public class TextManager : MonoBehaviour
     private int day = 0;
     private int month = 1;
 
+    public TextMesh choice_1_text;
+    public TextMesh choice_2_text;
+    public TextMesh choice_3_text;
+
     public TextMesh event_desc;
     public TextMesh resolution_desc;
 
@@ -24,11 +28,15 @@ public class TextManager : MonoBehaviour
     public List<Event> event_negatif_list;
     public List<Event> event_positif_list;
     private int index_event = -1;
-    public  int nb_event_by_game = 2;
+    public  int nb_event_by_game = 5;
 
     public GameObject barre1;
     public GameObject barre2;
     public GameObject barre3;
+
+    public GameObject canvas_book;
+    public Animator animation_book;
+    public Animator animation_camera;
 
     void Create_date()
     {
@@ -47,7 +55,8 @@ public class TextManager : MonoBehaviour
       }
 
       month %= 13;
-      day %= 28 + 1;
+      day %= 28;
+      day += 1;
 
       string[] correspondace_mois = new string[12] {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
@@ -66,6 +75,11 @@ public class TextManager : MonoBehaviour
         Reset_barre();
         Write_event();
       }
+      else{
+        animation_book.SetTrigger("Open");
+        animation_camera.SetTrigger("Move_Camera");
+        canvas_book.SetActive(false);
+      }
     }
 
 
@@ -76,6 +90,19 @@ public class TextManager : MonoBehaviour
       init_event_negatif_list();
       init_choice_list();
       New_Page();
+    }
+
+
+    string add_line_in_texte(string texte)
+    {
+      var parts = split_line(texte, 30);
+      return string.Join("\n", parts);
+    }
+
+    IEnumerable<string>  split_line(string current_text, int partLength)
+    {
+      for (var i = 0; i < current_text.Length; i += partLength)
+      yield return current_text.Substring(i, Mathf.Min(partLength, current_text.Length - i));
     }
 
     void init_positif_env()
@@ -106,6 +133,7 @@ public class TextManager : MonoBehaviour
               }
               index_fields += 1;
             }
+            current_text = add_line_in_texte(current_text);
             Event current_positif_event = new Event(current_text, current_value);
             event_positif_list.Add(current_positif_event);
           }
@@ -135,7 +163,7 @@ public class TextManager : MonoBehaviour
 
           foreach(string field in fields)
           {
-            if (index_fields == 0)
+            if (index_fields == 1)
             {
               int index_currection_positive = 0;
               foreach (string index_event in field.Split('-'))
@@ -146,12 +174,13 @@ public class TextManager : MonoBehaviour
               }
 
             }
-            else if (index_fields == 1)
+            else if (index_fields == 2)
             {
               current_text = field;
             }
             index_fields += 1;
           }
+          current_text = add_line_in_texte(current_text);
           Event current_negatif_event = new Event(current_text, current_positive_event);
           event_negatif_list.Add(current_negatif_event);
         }
@@ -166,16 +195,17 @@ public class TextManager : MonoBehaviour
       int index_choice_event = 0;
       int nb_event = event_negatif_list.Count;
       List<int> choice_list = new List<int>();
+      Random.seed = (int)System.DateTime.Now.Ticks;
 
       negatif_event_of_this_run = new Event[nb_event_by_game];
       for (int i = 0; i < nb_event_by_game; i++)
       {
-        int choice = 0;
+        int choice =  Random.Range(0, nb_event);
         while (choice_list.Contains(choice))
         {
           choice = Random.Range(0, nb_event);
+          print (choice);
         }
-
         negatif_event_of_this_run[index_choice_event] = event_negatif_list[choice];
         index_choice_event += 1;
         choice_list.Add(choice);
@@ -196,9 +226,14 @@ public class TextManager : MonoBehaviour
       choice_1.my_text = negatif_event_of_this_run[index_event].solution[0].text;
       choice_2.my_text = negatif_event_of_this_run[index_event].solution[1].text;
       choice_3.my_text = negatif_event_of_this_run[index_event].solution[2].text;
+
       choice_1.quantity = negatif_event_of_this_run[index_event].solution[2].value;
       choice_2.quantity = negatif_event_of_this_run[index_event].solution[2].value;
       choice_3.quantity = negatif_event_of_this_run[index_event].solution[2].value;
+
+      choice_1_text.text = negatif_event_of_this_run[index_event].solution[0].text.Split('\n')[0];
+      choice_2_text.text = negatif_event_of_this_run[index_event].solution[1].text.Split('\n')[0];
+      choice_3_text.text = negatif_event_of_this_run[index_event].solution[2].text.Split('\n')[0];
     }
 
     [System.Serializable]
@@ -211,7 +246,7 @@ public class TextManager : MonoBehaviour
         public Event(string current_text, Event[] current_solution)
         {
           text = current_text;
-          solution  = current_solution;
+          solution = current_solution;
         }
 
         public Event(string current_text, string current_value)

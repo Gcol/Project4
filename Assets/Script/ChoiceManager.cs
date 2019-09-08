@@ -20,7 +20,6 @@ public class ChoiceManager : MonoBehaviour
       other_barre_1.SetActive(true);
       other_barre_2.SetActive(true);
       text.text = my_text;
-      print (quantity);
       global.my_value = quantity;
     }
 }
