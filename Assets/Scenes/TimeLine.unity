@@ -378,6 +378,9 @@ MonoBehaviour:
   event_negatif_list: []
   event_positif_list: []
   nb_event_by_game: 2
+  barre1: {fileID: 690278169}
+  barre2: {fileID: 1033975881}
+  barre3: {fileID: 1965965436}
 --- !u!1 &620763107
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,11 +708,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc0f7e7dcdd6467d9497c74dcb08566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_description: 
+  my_text: 
+  quantity: 
   text: {fileID: 946036138}
   current_barre: {fileID: 1033975881}
   other_barre_1: {fileID: 690278169}
   other_barre_2: {fileID: 1965965436}
+  global: {fileID: 1304550054}
 --- !u!1 &926586504
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,11 +870,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc0f7e7dcdd6467d9497c74dcb08566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_description: 
+  my_text: 
+  quantity: 
   text: {fileID: 946036138}
   current_barre: {fileID: 690278169}
   other_barre_1: {fileID: 1033975881}
   other_barre_2: {fileID: 1965965436}
+  global: {fileID: 1304550054}
 --- !u!1 &935901702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1305,7 @@ GameObject:
   - component: {fileID: 1304550053}
   - component: {fileID: 1304550052}
   - component: {fileID: 1304550051}
+  - component: {fileID: 1304550054}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1370,6 +1378,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304550054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304550050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03f5d9406b6242bbaf737f3282d3719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity_couleur: 
+  code_couleur: []
+  emotion_quantity: 
+  my_value: 
 --- !u!1 &1320335849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1405,7 @@ GameObject:
   - component: {fileID: 1320335852}
   - component: {fileID: 1320335851}
   - component: {fileID: 1320335850}
+  - component: {fileID: 1320335853}
   m_Layer: 0
   m_Name: Next_page
   m_TagString: Untagged
@@ -1429,12 +1454,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!4 &1320335852
 Transform:
   m_ObjectHideFlags: 0
@@ -1449,6 +1474,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320335853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320335849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2024fd732473d433c885ae2b29c994c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  my_book: {fileID: 521431707}
 --- !u!1 &1336308056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,11 +1734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc0f7e7dcdd6467d9497c74dcb08566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_description: 
+  my_text: 
+  quantity: 
   text: {fileID: 946036138}
   current_barre: {fileID: 1965965436}
   other_barre_1: {fileID: 1033975881}
   other_barre_2: {fileID: 690278169}
+  global: {fileID: 1304550054}
 --- !u!1 &1537310860
 GameObject:
   m_ObjectHideFlags: 0

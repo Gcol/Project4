@@ -78,7 +78,8 @@ public class TextManager : MonoBehaviour
       New_Page();
     }
 
-    void init_positif_env(){
+    void init_positif_env()
+    {
       event_positif_list = new List<Event>();
       string[] records = event_positif.text.Split ('\n');
 
@@ -192,9 +193,12 @@ public class TextManager : MonoBehaviour
     void Write_event()
     {
       event_desc.text = negatif_event_of_this_run[index_event].text;
-      choice_1.my_description = negatif_event_of_this_run[index_event].solution[0].text;
-      choice_2.my_description = negatif_event_of_this_run[index_event].solution[1].text;
-      choice_3.my_description = negatif_event_of_this_run[index_event].solution[2].text;
+      choice_1.my_text = negatif_event_of_this_run[index_event].solution[0].text;
+      choice_2.my_text = negatif_event_of_this_run[index_event].solution[1].text;
+      choice_3.my_text = negatif_event_of_this_run[index_event].solution[2].text;
+      choice_1.quantity = negatif_event_of_this_run[index_event].solution[2].value;
+      choice_2.quantity = negatif_event_of_this_run[index_event].solution[2].value;
+      choice_3.quantity = negatif_event_of_this_run[index_event].solution[2].value;
     }
 
     [System.Serializable]
