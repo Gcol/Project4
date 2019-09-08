@@ -45,8 +45,13 @@ public class GlobalGameManager : MonoBehaviour
     {
       foreach (string color_code in my_value.Split('-'))
       {
-        int index_color = ArrayUtility.IndexOf(equivalence_color, color_code[0]);
-        quantity_couleur[index_color] += int.Parse(color_code);
+        int index_color = 0;
+        foreach(char code in equivalence_color)
+        {
+          if (code == color_code[0])
+            quantity_couleur[index_color] += int.Parse(color_code);
+          index_color += 1;
+        }
       }
     }
 }
