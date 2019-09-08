@@ -38,9 +38,9 @@ public class Fade : MonoBehaviour
              yield return new WaitForEndOfFrame();
         }
 
-       yield return null; 
+       yield return null;
     }
-    
+
     IEnumerator FadeOut(){
         StopCoroutine(FadeIn());
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0 );
@@ -56,7 +56,7 @@ public class Fade : MonoBehaviour
                 txt.color = new Color(txt.color.r, txt.color.g, txt.color.b, i );
                 yield return new WaitForEndOfFrame();
             }
-            
+
             yield return new WaitForSeconds(3);
 
             for(float i =1; i > 0; i-=Time.deltaTime){
@@ -69,13 +69,13 @@ public class Fade : MonoBehaviour
         yield return new WaitForSeconds(timerAfterMaxOut/2);
 
 
-        if( AlreadyPlayed.Played){
-            Application.Quit();
-        }
-        if (SceneManager.GetActiveScene().name == "Main1"){
-            AlreadyPlayed.Played = true;
-        } 
+        //if( AlreadyPlayed.Played){
+        //      Application.Quit();
+        //}
+        //if (SceneManager.GetActiveScene().name == "Main1"){
+        //    AlreadyPlayed.Played = true;
+        //}
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-       yield return null; 
+       yield return null;
     }
 }
