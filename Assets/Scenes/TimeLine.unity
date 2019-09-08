@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -448,8 +448,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fc3b0d3d8b040c487534c0a5047d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   event_positif: {fileID: 4900000, guid: cef41209ad8334ee888af27ef9ef7228, type: 3}
   event_negatif: {fileID: 4900000, guid: 1d22928211b8f446781cd66709071859, type: 3}
   date_du_jour: {fileID: 1336308058}
@@ -790,10 +790,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dc0f7e7dcdd6467d9497c74dcb08566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  my_text: 
-  quantity: 
+  m_Name:
+  m_EditorClassIdentifier:
+  my_text:
+  quantity:
   text: {fileID: 946036138}
   current_barre: {fileID: 1033975881}
   other_barre_1: {fileID: 690278169}
@@ -952,10 +952,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dc0f7e7dcdd6467d9497c74dcb08566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  my_text: 
-  quantity: 
+  m_Name:
+  m_EditorClassIdentifier:
+  my_text:
+  quantity:
   text: {fileID: 946036138}
   current_barre: {fileID: 690278169}
   other_barre_1: {fileID: 1033975881}
@@ -1472,12 +1472,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d03f5d9406b6242bbaf737f3282d3719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quantity_couleur: 
+  m_Name:
+  m_EditorClassIdentifier:
+  quantity_couleur:
   code_couleur: []
-  emotion_quantity: 
-  my_value: 
+  emotion_quantity:
+  my_value:
 --- !u!1 &1320335849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,8 +1568,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2024fd732473d433c885ae2b29c994c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   my_book: {fileID: 521431707}
 --- !u!1 &1336308056
 GameObject:
@@ -1816,10 +1816,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dc0f7e7dcdd6467d9497c74dcb08566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  my_text: 
-  quantity: 
+  m_Name:
+  m_EditorClassIdentifier:
+  my_text:
+  quantity:
   text: {fileID: 946036138}
   current_barre: {fileID: 1965965436}
   other_barre_1: {fileID: 1033975881}
@@ -1905,7 +1905,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> def41e9814e3f7176a3be8014d4cb7c8e4e4fc11
 --- !u!1 &1537310860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,8 +2461,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -2479,8 +2478,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
